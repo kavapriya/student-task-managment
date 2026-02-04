@@ -139,8 +139,8 @@ const Register = () => {
         </form>
 
         {/*Link to Register page*/}
-        <p ClassName="link-text">
-          Already have an account?<Link to="/Login">Login here</Link>
+        <p className="link-text">
+          Already have an account?<Link to="/login">Login here</Link>
         </p>
       </div>
     </>
