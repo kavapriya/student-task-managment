@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import TaskList from "../components/TaskList";
+import TaskForm from "../components/TackForm";
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -38,6 +39,7 @@ const Dashboard = () => {
   return (
     <div>
       <NavBar title="Task Management" onLogout={handleLogout}/>
+      <TaskForm/>
       <h1>MY TASKS</h1>
       <TaskList tasks={tasks}/>
     </div>
