@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 
-function Navbar({title, onLogout}) {
+function NavBar({title, onLogout, onAddtaskBtnClick, isFormOpen}) {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -9,8 +9,8 @@ function Navbar({title, onLogout}) {
       </div>
 
       <div className="navbar-actions">
-        <button className="btn-primary">
-          Add Task
+        <button className={isFormOpen ? 'btn-secondary': 'btn-primary'} onClick={onAddtaskBtnClick}>
+          {isFormOpen ? 'Close' : 'Add Task'}
         </button>
 
         <button className="btn-secondary" onClick={onLogout}>
@@ -21,4 +21,4 @@ function Navbar({title, onLogout}) {
   );
 }
 
-export default Navbar;
+export default NavBar;
